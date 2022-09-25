@@ -70,13 +70,106 @@ void setup()
 void loop() {
   // put your main code here, to run repeatedly:
 
+
 //Forward
+digitalWrite(motor_1a,HIGH);
+digitalWrite(motor_1b,LOW);
+digitalWrite(motor_2a,LOW);
+digitalWrite(motor_2b,HIGH);
+digitalWrite(motor_3a,HIGH);
+digitalWrite(motor_3b,LOW);
+digitalWrite(motor_4a,LOW);
+digitalWrite(motor_4b,HIGH);
 
+//Backward
+digitalWrite(motor_1a,LOW);
+digitalWrite(motor_1b,HIGH);
+digitalWrite(motor_2a,HIGH);
+digitalWrite(motor_2b,LOW);
+digitalWrite(motor_3a,LOW);
+digitalWrite(motor_3b,HIGH);
+digitalWrite(motor_4a,HIGH);
+digitalWrite(motor_4b,LOW);
 
+//Left
+digitalWrite(motor_1a,LOW);
+digitalWrite(motor_1b,HIGH);
+digitalWrite(motor_2a,LOW);
+digitalWrite(motor_2b,HIGH);
+digitalWrite(motor_3a,HIGH);
+digitalWrite(motor_3b,LOW);
+digitalWrite(motor_4a,HIGH);
+digitalWrite(motor_4b,LOW);
+
+//Right
+digitalWrite(motor_1a,HIGH);
+digitalWrite(motor_1b,LOW);
+digitalWrite(motor_2a,HIGH);
+digitalWrite(motor_2b,LOW);
+digitalWrite(motor_3a,LOW);
+digitalWrite(motor_3b,HIGH);
+digitalWrite(motor_4a,LOW);
+digitalWrite(motor_4b,HIGH);
+
+//Forward Left
+digitalWrite(motor_1a,HIGH);
+digitalWrite(motor_1b,HIGH);
+digitalWrite(motor_2a,LOW);
+digitalWrite(motor_2b,HIGH);
+digitalWrite(motor_3a,HIGH);
+digitalWrite(motor_3b,LOW);
+digitalWrite(motor_4a,HIGH);
+digitalWrite(motor_4b,HIGH);
  
+//Forward Right
+digitalWrite(motor_1a,HIGH);
+digitalWrite(motor_1b,LOW);
+digitalWrite(motor_2a,HIGH);
+digitalWrite(motor_2b,HIGH);
+digitalWrite(motor_3a,HIGH);
+digitalWrite(motor_3b,HIGH);
+digitalWrite(motor_4a,LOW);
+digitalWrite(motor_4b,HIGH);
 
+//Backward Left
+digitalWrite(motor_1a,LOW);
+digitalWrite(motor_1b,HIGH);
+digitalWrite(motor_2a,HIGH);
+digitalWrite(motor_2b,HIGH);
+digitalWrite(motor_3a,HIGH);
+digitalWrite(motor_3b,HIGH);
+digitalWrite(motor_4a,HIGH);
+digitalWrite(motor_4b,LOW);
+ 
+//Backward Right
+digitalWrite(motor_1a,HIGH);
+digitalWrite(motor_1b,HIGH);
+digitalWrite(motor_2a,HIGH);
+digitalWrite(motor_2b,LOW);
+digitalWrite(motor_3a,LOW);
+digitalWrite(motor_3b,HIGH);
+digitalWrite(motor_4a,HIGH);
+digitalWrite(motor_4b,HIGH);
 
+//Rotate Left
+digitalWrite(motor_1a,LOW);
+digitalWrite(motor_1b,HIGH);
+digitalWrite(motor_2a,LOW);
+digitalWrite(motor_2b,HIGH);
+digitalWrite(motor_3a,HIGH);
+digitalWrite(motor_3b,LOW);
+digitalWrite(motor_4a,LOW);
+digitalWrite(motor_4b,HIGH);
 
+//Rotate Right
+digitalWrite(motor_1a,HIGH);
+digitalWrite(motor_1b,LOW);
+digitalWrite(motor_2a,HIGH);
+digitalWrite(motor_2b,LOW);
+digitalWrite(motor_3a,LOW);
+digitalWrite(motor_3b,HIGH);
+digitalWrite(motor_4a,HIGH);
+digitalWrite(motor_4b,LOW);
 
 
 
