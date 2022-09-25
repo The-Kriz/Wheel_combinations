@@ -135,7 +135,7 @@ void loop()
    digitalWrite(motor_4PWM,80);
   }
 
-  else if( lJoyY >50 and lJoyX > 50 )
+  else if( lJoyY > 142 and lJoyX > 142 )
   {
     //Forward Right
     digitalWrite(motor_1a,HIGH);
@@ -153,7 +153,7 @@ void loop()
    digitalWrite(motor_4PWM,80);
   }
 
-  else if( lJoyY < 50 and lJoyX < 50 )
+  else if( lJoyY < 113 and lJoyX < 113 )
   {
     //Backward Left
     digitalWrite(motor_1a,LOW);
@@ -171,7 +171,7 @@ void loop()
    digitalWrite(motor_4PWM,80);
   }
   
-  else if( lJoyY > 50 and lJoyX < 50 )
+  else if( lJoyY > 142 and lJoyX < 113 )
   {
     //Forward Left
     digitalWrite(motor_1a,HIGH);
@@ -189,7 +189,7 @@ void loop()
    digitalWrite(motor_4PWM,80);
   }
 
-  else if( lJoyY < 50 and lJoyX > 50 )
+  else if( lJoyY < 113 and lJoyX > 142 )
   {
     //Backward Right
     digitalWrite(motor_1a,HIGH);
@@ -207,7 +207,7 @@ void loop()
    digitalWrite(motor_4PWM,80);
   }
 
-  else if( lJoyY > 50 )
+  else if( lJoyY > 142 )
   {  
     //Forward
     digitalWrite(motor_1a,HIGH);
@@ -225,7 +225,7 @@ void loop()
    digitalWrite(motor_4PWM,80);
   }
 
-  else if( lJoyY < 50)
+  else if( lJoyY < 113 )
   {
     //Backward
     digitalWrite(motor_1a,LOW);
@@ -242,7 +242,7 @@ void loop()
    digitalWrite(motor_3PWM,80);
    digitalWrite(motor_4PWM,80);
   }
-  else if( lJoyX < 50 )
+  else if( lJoyX < 113 )
   {    
     //Left
     digitalWrite(motor_1a,LOW);
@@ -260,7 +260,7 @@ void loop()
    digitalWrite(motor_4PWM,80);
   }
   
-  else if( lJoyX > 50 )
+  else if( lJoyX > 142 )
   {    
     //Right
     digitalWrite(motor_1a,HIGH);
