@@ -12,10 +12,7 @@ PS2X ps2x;
 int error = 0; 
 byte type = 0;
 byte vibrate = 0;
-int motor_Front_left_speed = 0; 
-int motor_Front_right_speed = 0;
-int motor_Back_left_speed = 0; 
-int motor_Back_right_speed = 0;
+int motor_speed = 80
 
 
 //motor driver(x2) pins 
@@ -111,10 +108,10 @@ void loop()
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
     
-   digitalWrite(motor_1PWM,80);
-   digitalWrite(motor_2PWM,80);
-   digitalWrite(motor_3PWM,80);
-   digitalWrite(motor_4PWM,80);
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   digitalWrite(motor_3PWM,motor_speed);
+   digitalWrite(motor_4PWM,motor_speed);
   }
   
   else if (ps2x.Button(PSB_R1)) 
@@ -129,10 +126,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
     
-   digitalWrite(motor_1PWM,80);
-   digitalWrite(motor_2PWM,80);
-   digitalWrite(motor_3PWM,80);
-   digitalWrite(motor_4PWM,80);
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   digitalWrite(motor_3PWM,motor_speed);
+   digitalWrite(motor_4PWM,motor_speed);
   }
 
   else if( lJoyY > 142 and lJoyX > 142 )
@@ -147,10 +144,10 @@ void loop()
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
     
-   digitalWrite(motor_1PWM,80);
-   digitalWrite(motor_2PWM,80);
-   digitalWrite(motor_3PWM,80);
-   digitalWrite(motor_4PWM,80);
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   digitalWrite(motor_3PWM,motor_speed);
+   digitalWrite(motor_4PWM,motor_speed);
   }
 
   else if( lJoyY < 113 and lJoyX < 113 )
@@ -165,10 +162,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
     
-   digitalWrite(motor_1PWM,80);
-   digitalWrite(motor_2PWM,80);
-   digitalWrite(motor_3PWM,80);
-   digitalWrite(motor_4PWM,80);
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   digitalWrite(motor_3PWM,motor_speed);
+   digitalWrite(motor_4PWM,motor_speed);
   }
   
   else if( lJoyY > 142 and lJoyX < 113 )
@@ -183,10 +180,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,HIGH);
     
-   digitalWrite(motor_1PWM,80);
-   digitalWrite(motor_2PWM,80);
-   digitalWrite(motor_3PWM,80);
-   digitalWrite(motor_4PWM,80);
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   digitalWrite(motor_3PWM,motor_speed);
+   digitalWrite(motor_4PWM,motor_speed);
   }
 
   else if( lJoyY < 113 and lJoyX > 142 )
@@ -201,10 +198,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,HIGH);
     
-   digitalWrite(motor_1PWM,80);
-   digitalWrite(motor_2PWM,80);
-   digitalWrite(motor_3PWM,80);
-   digitalWrite(motor_4PWM,80);
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   digitalWrite(motor_3PWM,motor_speed);
+   digitalWrite(motor_4PWM,motor_speed);
   }
 
   else if( lJoyY > 142 )
@@ -219,10 +216,10 @@ void loop()
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
     
-   digitalWrite(motor_1PWM,80);
-   digitalWrite(motor_2PWM,80);
-   digitalWrite(motor_3PWM,80);
-   digitalWrite(motor_4PWM,80);
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   digitalWrite(motor_3PWM,motor_speed);
+   digitalWrite(motor_4PWM,motor_speed);
   }
 
   else if( lJoyY < 113 )
@@ -237,10 +234,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
     
-   digitalWrite(motor_1PWM,80);
-   digitalWrite(motor_2PWM,80);
-   digitalWrite(motor_3PWM,80);
-   digitalWrite(motor_4PWM,80);
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   digitalWrite(motor_3PWM,motor_speed);
+   digitalWrite(motor_4PWM,motor_speed);
   }
   else if( lJoyX < 113 )
   {    
@@ -254,10 +251,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
     
-   digitalWrite(motor_1PWM,80);
-   digitalWrite(motor_2PWM,80);
-   digitalWrite(motor_3PWM,80);
-   digitalWrite(motor_4PWM,80);
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   digitalWrite(motor_3PWM,motor_speed);
+   digitalWrite(motor_4PWM,motor_speed);
   }
   
   else if( lJoyX > 142 )
@@ -272,10 +269,10 @@ void loop()
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
     
-   digitalWrite(motor_1PWM,80);
-   digitalWrite(motor_2PWM,80);
-   digitalWrite(motor_3PWM,80);
-   digitalWrite(motor_4PWM,80);
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   digitalWrite(motor_3PWM,motor_speed);
+   digitalWrite(motor_4PWM,motor_speed);
   }
   else
   {
