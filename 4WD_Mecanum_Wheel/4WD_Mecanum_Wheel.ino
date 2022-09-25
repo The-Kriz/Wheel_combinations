@@ -12,6 +12,11 @@ PS2X ps2x;
 int error = 0; 
 byte type = 0;
 byte vibrate = 0;
+int motor_Front_left_speed = 0; 
+int motor_Front_right_speed = 0;
+int motor_Back_left_speed = 0; 
+int motor_Back_right_speed = 0;
+
 
 //motor driver(x2) pins 
 //Front Left
@@ -34,7 +39,7 @@ byte vibrate = 0;
 
 void setup() 
 {
-  Serial.begin(57600);
+  Serial.begin(57600); 
    pinMode(motor_1a,OUTPUT);
    pinMode(motor_1b,OUTPUT);
    pinMode(motor_1PWM,OUTPUT);
@@ -74,6 +79,11 @@ void setup()
           Serial.println("GuitarHero Controller Found");
         break;
       }
+      
+  digitalWrite(motor_1PWM,0);
+  digitalWrite(motor_2PWM,0);
+  digitalWrite(motor_3PWM,0);
+  digitalWrite(motor_4PWM,0);
 }
 
 void loop() 
@@ -92,6 +102,11 @@ void loop()
     digitalWrite(motor_3b,LOW);
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
+    
+//    digitalWrite(motor_1PWM,0);
+//    digitalWrite(motor_2PWM,0);
+//    digitalWrite(motor_3PWM,0);
+//    digitalWrite(motor_4PWM,0);
   }
   
   else if (ps2x.Button(PSB_R1)) 
@@ -105,6 +120,11 @@ void loop()
     digitalWrite(motor_3b,HIGH);
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
+    
+//    digitalWrite(motor_1PWM,0);
+//    digitalWrite(motor_2PWM,0);
+//    digitalWrite(motor_3PWM,0);
+//    digitalWrite(motor_4PWM,0);
   }
 
   else if( lJoyY >50 and lJoyX > 50 )
@@ -118,6 +138,11 @@ void loop()
     digitalWrite(motor_3b,HIGH);
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
+    
+//    digitalWrite(motor_1PWM,0);
+//    digitalWrite(motor_2PWM,0);
+//    digitalWrite(motor_3PWM,0);
+//    digitalWrite(motor_4PWM,0);
   }
 
   else if( lJoyY < 50 and lJoyX < 50 )
@@ -131,6 +156,11 @@ void loop()
     digitalWrite(motor_3b,HIGH);
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
+    
+//    digitalWrite(motor_1PWM,0);
+//    digitalWrite(motor_2PWM,0);
+//    digitalWrite(motor_3PWM,0);
+//    digitalWrite(motor_4PWM,0);
   }
   
   else if( lJoyY > 50 and lJoyX < 50 )
@@ -144,6 +174,11 @@ void loop()
     digitalWrite(motor_3b,LOW);
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,HIGH);
+    
+//    digitalWrite(motor_1PWM,0);
+//    digitalWrite(motor_2PWM,0);
+//    digitalWrite(motor_3PWM,0);
+//    digitalWrite(motor_4PWM,0);
   }
 
   else if( lJoyY < 50 and lJoyX > 50 )
@@ -157,6 +192,11 @@ void loop()
     digitalWrite(motor_3b,HIGH);
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,HIGH);
+    
+//    digitalWrite(motor_1PWM,0);
+//    digitalWrite(motor_2PWM,0);
+//    digitalWrite(motor_3PWM,0);
+//    digitalWrite(motor_4PWM,0);
   }
 
   else if( lJoyY > 50 )
@@ -170,6 +210,11 @@ void loop()
     digitalWrite(motor_3b,LOW);
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
+    
+//    digitalWrite(motor_1PWM,0);
+//    digitalWrite(motor_2PWM,0);
+//    digitalWrite(motor_3PWM,0);
+//    digitalWrite(motor_4PWM,0);
   }
 
   else if( lJoyY < 50)
@@ -183,6 +228,11 @@ void loop()
     digitalWrite(motor_3b,HIGH);
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
+    
+//    digitalWrite(motor_1PWM,0);
+//    digitalWrite(motor_2PWM,0);
+//    digitalWrite(motor_3PWM,0);
+//    digitalWrite(motor_4PWM,0);
   }
   else if( lJoyX < 50 )
   {    
@@ -195,6 +245,11 @@ void loop()
     digitalWrite(motor_3b,LOW);
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
+    
+//    digitalWrite(motor_1PWM,0);
+//    digitalWrite(motor_2PWM,0);
+//    digitalWrite(motor_3PWM,0);
+//    digitalWrite(motor_4PWM,0);
   }
   
   else if( lJoyX > 50 )
@@ -208,5 +263,26 @@ void loop()
     digitalWrite(motor_3b,HIGH);
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
+    
+//    digitalWrite(motor_1PWM,0);
+//    digitalWrite(motor_2PWM,0);
+//    digitalWrite(motor_3PWM,0);
+//    digitalWrite(motor_4PWM,0);
+  }
+  else
+  {
+    digitalWrite(motor_1a,LOW);
+    digitalWrite(motor_1b,LOW);
+    digitalWrite(motor_2a,LOW);
+    digitalWrite(motor_2b,LOW);
+    digitalWrite(motor_3a,LOW);
+    digitalWrite(motor_3b,LOW);
+    digitalWrite(motor_4a,LOW);
+    digitalWrite(motor_4b,LOW);
+    
+    digitalWrite(motor_1PWM,0);
+    digitalWrite(motor_2PWM,0);
+    digitalWrite(motor_3PWM,0);
+    digitalWrite(motor_4PWM,0);
   }
 }
