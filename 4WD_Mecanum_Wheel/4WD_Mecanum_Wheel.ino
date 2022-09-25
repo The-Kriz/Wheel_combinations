@@ -84,6 +84,14 @@ void setup()
   digitalWrite(motor_2PWM,0);
   digitalWrite(motor_3PWM,0);
   digitalWrite(motor_4PWM,0);
+  digitalWrite(motor_1a,HIGH);
+  digitalWrite(motor_1b,HIGH);
+  digitalWrite(motor_2a,HIGH);
+  digitalWrite(motor_2b,HIGH);
+  digitalWrite(motor_3a,HIGH);
+  digitalWrite(motor_3b,HIGH);
+  digitalWrite(motor_4a,HIGH);
+  digitalWrite(motor_4b,HIGH);
 }
 
 void loop() 
@@ -103,10 +111,10 @@ void loop()
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
     
-//    digitalWrite(motor_1PWM,0);
-//    digitalWrite(motor_2PWM,0);
-//    digitalWrite(motor_3PWM,0);
-//    digitalWrite(motor_4PWM,0);
+   digitalWrite(motor_1PWM,80);
+   digitalWrite(motor_2PWM,80);
+   digitalWrite(motor_3PWM,80);
+   digitalWrite(motor_4PWM,80);
   }
   
   else if (ps2x.Button(PSB_R1)) 
@@ -121,10 +129,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
     
-//    digitalWrite(motor_1PWM,0);
-//    digitalWrite(motor_2PWM,0);
-//    digitalWrite(motor_3PWM,0);
-//    digitalWrite(motor_4PWM,0);
+   digitalWrite(motor_1PWM,80);
+   digitalWrite(motor_2PWM,80);
+   digitalWrite(motor_3PWM,80);
+   digitalWrite(motor_4PWM,80);
   }
 
   else if( lJoyY >50 and lJoyX > 50 )
@@ -139,10 +147,10 @@ void loop()
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
     
-//    digitalWrite(motor_1PWM,0);
-//    digitalWrite(motor_2PWM,0);
-//    digitalWrite(motor_3PWM,0);
-//    digitalWrite(motor_4PWM,0);
+   digitalWrite(motor_1PWM,80);
+   digitalWrite(motor_2PWM,80);
+   digitalWrite(motor_3PWM,80);
+   digitalWrite(motor_4PWM,80);
   }
 
   else if( lJoyY < 50 and lJoyX < 50 )
@@ -157,10 +165,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
     
-//    digitalWrite(motor_1PWM,0);
-//    digitalWrite(motor_2PWM,0);
-//    digitalWrite(motor_3PWM,0);
-//    digitalWrite(motor_4PWM,0);
+   digitalWrite(motor_1PWM,80);
+   digitalWrite(motor_2PWM,80);
+   digitalWrite(motor_3PWM,80);
+   digitalWrite(motor_4PWM,80);
   }
   
   else if( lJoyY > 50 and lJoyX < 50 )
@@ -175,10 +183,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,HIGH);
     
-//    digitalWrite(motor_1PWM,0);
-//    digitalWrite(motor_2PWM,0);
-//    digitalWrite(motor_3PWM,0);
-//    digitalWrite(motor_4PWM,0);
+   digitalWrite(motor_1PWM,80);
+   digitalWrite(motor_2PWM,80);
+   digitalWrite(motor_3PWM,80);
+   digitalWrite(motor_4PWM,80);
   }
 
   else if( lJoyY < 50 and lJoyX > 50 )
@@ -193,10 +201,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,HIGH);
     
-//    digitalWrite(motor_1PWM,0);
-//    digitalWrite(motor_2PWM,0);
-//    digitalWrite(motor_3PWM,0);
-//    digitalWrite(motor_4PWM,0);
+   digitalWrite(motor_1PWM,80);
+   digitalWrite(motor_2PWM,80);
+   digitalWrite(motor_3PWM,80);
+   digitalWrite(motor_4PWM,80);
   }
 
   else if( lJoyY > 50 )
@@ -211,10 +219,10 @@ void loop()
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
     
-//    digitalWrite(motor_1PWM,0);
-//    digitalWrite(motor_2PWM,0);
-//    digitalWrite(motor_3PWM,0);
-//    digitalWrite(motor_4PWM,0);
+   digitalWrite(motor_1PWM,80);
+   digitalWrite(motor_2PWM,80);
+   digitalWrite(motor_3PWM,80);
+   digitalWrite(motor_4PWM,80);
   }
 
   else if( lJoyY < 50)
@@ -229,10 +237,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
     
-//    digitalWrite(motor_1PWM,0);
-//    digitalWrite(motor_2PWM,0);
-//    digitalWrite(motor_3PWM,0);
-//    digitalWrite(motor_4PWM,0);
+   digitalWrite(motor_1PWM,80);
+   digitalWrite(motor_2PWM,80);
+   digitalWrite(motor_3PWM,80);
+   digitalWrite(motor_4PWM,80);
   }
   else if( lJoyX < 50 )
   {    
@@ -246,10 +254,10 @@ void loop()
     digitalWrite(motor_4a,HIGH);
     digitalWrite(motor_4b,LOW);
     
-//    digitalWrite(motor_1PWM,0);
-//    digitalWrite(motor_2PWM,0);
-//    digitalWrite(motor_3PWM,0);
-//    digitalWrite(motor_4PWM,0);
+   digitalWrite(motor_1PWM,80);
+   digitalWrite(motor_2PWM,80);
+   digitalWrite(motor_3PWM,80);
+   digitalWrite(motor_4PWM,80);
   }
   
   else if( lJoyX > 50 )
@@ -264,25 +272,26 @@ void loop()
     digitalWrite(motor_4a,LOW);
     digitalWrite(motor_4b,HIGH);
     
-//    digitalWrite(motor_1PWM,0);
-//    digitalWrite(motor_2PWM,0);
-//    digitalWrite(motor_3PWM,0);
-//    digitalWrite(motor_4PWM,0);
+   digitalWrite(motor_1PWM,80);
+   digitalWrite(motor_2PWM,80);
+   digitalWrite(motor_3PWM,80);
+   digitalWrite(motor_4PWM,80);
   }
   else
   {
-    digitalWrite(motor_1a,LOW);
-    digitalWrite(motor_1b,LOW);
-    digitalWrite(motor_2a,LOW);
-    digitalWrite(motor_2b,LOW);
-    digitalWrite(motor_3a,LOW);
-    digitalWrite(motor_3b,LOW);
-    digitalWrite(motor_4a,LOW);
-    digitalWrite(motor_4b,LOW);
+    digitalWrite(motor_1a,HIGH);
+    digitalWrite(motor_1b,HIGH);
+    digitalWrite(motor_2a,HIGH);
+    digitalWrite(motor_2b,HIGH);
+    digitalWrite(motor_3a,HIGH);
+    digitalWrite(motor_3b,HIGH);
+    digitalWrite(motor_4a,HIGH);
+    digitalWrite(motor_4b,HIGH);
     
     digitalWrite(motor_1PWM,0);
     digitalWrite(motor_2PWM,0);
     digitalWrite(motor_3PWM,0);
     digitalWrite(motor_4PWM,0);
   }
+  delay(50);
 }
