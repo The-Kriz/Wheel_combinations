@@ -104,6 +104,7 @@ void loop()
   if (ps2x.Button(PSB_L1))
   {
     //Rotate Left
+    Serial.println("Rotating Left");
     digitalWrite(motor_1a,LOW);
     digitalWrite(motor_1b,HIGH);
     digitalWrite(motor_2a,LOW);
@@ -122,6 +123,7 @@ void loop()
   else if (ps2x.Button(PSB_R1)) 
   {   
     //Rotate Right
+    Serial.println("Rotating Right");
     digitalWrite(motor_1a,HIGH);
     digitalWrite(motor_1b,LOW);
     digitalWrite(motor_2a,HIGH);
@@ -139,6 +141,7 @@ void loop()
   else if ( lJoyY >= pss_val_high_low && lJoyY <= pss_val_high_high && lJoyX >=pss_val_high_low && lJoyX <= pss_val_high_high )
   {
     //Forward Right
+    Serial.println("moving Forward Right");
     digitalWrite(motor_1a,HIGH);
     digitalWrite(motor_1b,LOW);
     digitalWrite(motor_2a,HIGH);
@@ -156,6 +159,7 @@ void loop()
   else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high && lJoyX >= pss_val_low_low && lJoyX <= pss_val_low_high )
   {
     //Backward Left
+    Serial.println("moving Backward Left");
     digitalWrite(motor_1a,LOW);
     digitalWrite(motor_1b,HIGH);
     digitalWrite(motor_2a,HIGH);
@@ -173,6 +177,7 @@ void loop()
   else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high && lJoyX >= pss_val_low_low && lJoyX <= pss_val_low_high )
   {
     //Forward Left
+    Serial.println("moving Forward Left");
     digitalWrite(motor_1a,HIGH);
     digitalWrite(motor_1b,HIGH);
     digitalWrite(motor_2a,LOW);
@@ -190,6 +195,7 @@ void loop()
   else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high && lJoyX >= pss_val_high_low && lJoyX <= pss_val_high_high )
   {
     //Backward Right
+    Serial.println("moving Backward Right");
     digitalWrite(motor_1a,HIGH);
     digitalWrite(motor_1b,HIGH);
     digitalWrite(motor_2a,HIGH);
@@ -207,6 +213,7 @@ void loop()
   else if ( lJoyY >= pss_val_high_low && lJoyY <= pss_val_high_high )
   {  
     //Forward
+    Serial.println("moving Forward");
     digitalWrite(motor_1a,HIGH);
     digitalWrite(motor_1b,LOW);
     digitalWrite(motor_2a,LOW);
@@ -224,6 +231,7 @@ void loop()
   else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high ) 
   {
     //Backward
+    Serial.println("moving Backward");
     digitalWrite(motor_1a,LOW);
     digitalWrite(motor_1b,HIGH);
     digitalWrite(motor_2a,HIGH);
@@ -241,6 +249,7 @@ void loop()
   else if( lJoyX >= pss_val_low_low && lJoyX <= pss_val_low_high )
   {    
     //Left
+    Serial.println("moving Left");
     digitalWrite(motor_1a,LOW);
     digitalWrite(motor_1b,HIGH);
     digitalWrite(motor_2a,LOW);
@@ -258,6 +267,7 @@ void loop()
   else if( lJoyX >=pss_val_high_low && lJoyX <= pss_val_high_high )
   {    
     //Right
+    Serial.println("moving Right");
     digitalWrite(motor_1a,HIGH);
     digitalWrite(motor_1b,LOW);
     digitalWrite(motor_2a,HIGH);
