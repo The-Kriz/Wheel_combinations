@@ -109,6 +109,7 @@ void loop()
   if( rJoyX >= pss_val_low_low && rJoyX <= pss_val_low_high )
   {
    //Rotate Left
+   Serial.println("Rotating Left");
    motor_Front_left_speed  = map( lJoyX, 120, 0, 0, 255);
    motor_Front_right_speed = map( lJoyX, 120, 0, 0, 255);
    motor_Back_left_speed   = map( lJoyX, 120, 0, 0, 255);
@@ -132,6 +133,7 @@ void loop()
   else if( rJoyX >= pss_val_high_low && rJoyX <= pss_val_high_high )
   {   
    //Rotate Right
+   Serial.println("Rotating Right");
    motor_Front_left_speed  = map( lJoyX, 140, 255, 0, 255);
    motor_Front_right_speed = map( lJoyX, 140, 255, 0, 255);
    motor_Back_left_speed   = map( lJoyX, 140, 255, 0, 255);
@@ -154,6 +156,7 @@ void loop()
   else if ( lJoyY >= pss_val_high_low && lJoyY <= pss_val_high_high && lJoyX >=pss_val_high_low && lJoyX <= pss_val_high_high )
   {
    //Forward Right
+   Serial.println("moving Forward Right");
    motor_Front_left_speed = map( lJoyY, 140, 255, 0, 255);
    motor_Back_right_speed = map( lJoyX, 140, 255, 0, 255);
    
@@ -174,6 +177,7 @@ void loop()
   else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high && lJoyX >= pss_val_low_low && lJoyX <= pss_val_low_high )
   {
    //Backward Left
+   Serial.println("moving Backward Left");
    motor_Front_left_speed = map( lJoyY, 120, 0, 0, 255);
    motor_Back_right_speed = map( lJoyX, 120, 0, 0, 255);
    digitalWrite(motor_1a,LOW);
@@ -193,6 +197,7 @@ void loop()
   else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high && lJoyX >= pss_val_low_low && lJoyX <= pss_val_low_high )
   {
    //Forward Left
+   Serial.println("moving Forward Left");
    motor_Front_right_speed = map( lJoyY, 140, 255, 0, 255);
    motor_Back_left_speed   = map( lJoyX, 120, 0, 0, 255);
    
@@ -213,6 +218,7 @@ void loop()
   else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high && lJoyX >= pss_val_high_low && lJoyX <= pss_val_high_high )
   {
    //Backward Right
+   Serial.println("moving Backward Right");
    motor_Front_right_speed = map( lJoyY, 120, 0, 0, 255);
    motor_Back_left_speed   = map( lJoyX, 140, 255, 0, 255);
    
@@ -233,6 +239,7 @@ void loop()
   else if ( lJoyY >= pss_val_high_low && lJoyY <= pss_val_high_high )
   {  
    //Forward
+   Serial.println("moving Forward");
    motor_Front_left_speed  = map(lJoyY,140 , 255, 0 , 255);
    motor_Front_right_speed = map(lJoyY,140 , 255, 0 , 255);
    motor_Back_left_speed   = map(lJoyY,140 , 255, 0 , 255);
@@ -255,6 +262,7 @@ void loop()
   else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high ) 
   {
    //Backward
+   Serial.println("moving Backward");
    motor_Front_left_speed  = map( lJoyY, 120, 0, 0, 255);
    motor_Front_right_speed = map( lJoyY, 120, 0, 0, 255);
    motor_Back_left_speed   = map( lJoyY, 120, 0, 0, 255);
@@ -277,6 +285,7 @@ void loop()
   else if( lJoyX >= pss_val_low_low && lJoyX <= pss_val_low_high )
   {    
    //Left
+   Serial.println("moving Left");
    motor_Front_left_speed  = map( lJoyX, 120, 0, 0, 255);
    motor_Front_right_speed = map( lJoyX, 120, 0, 0, 255);
    motor_Back_left_speed   = map( lJoyX, 120, 0, 0, 255);
@@ -299,6 +308,7 @@ void loop()
   else if( lJoyX >=pss_val_high_low && lJoyX <= pss_val_high_high )
   {    
    //Right
+   Serial.println("moving Right");
    motor_Front_left_speed  = map( lJoyX, 140, 255, 0, 255);
    motor_Front_right_speed = map( lJoyX, 140, 255, 0, 255);
    motor_Back_left_speed   = map( lJoyX, 140, 255, 0, 255);
