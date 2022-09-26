@@ -12,8 +12,13 @@ PS2X ps2x;
 int error = 0; 
 byte type = 0;
 byte vibrate = 0;
-int motor_speed = 80
 
+int pss_val_high_high = 255;
+int pss_val_high_low = 170;
+int pss_val_low_high = 85;
+int pss_val_low_low = 0;
+
+int motor_speed = 80;
 
 //motor driver(x2) pins 
 //Front Left
@@ -131,8 +136,7 @@ void loop()
    digitalWrite(motor_3PWM,motor_speed);
    digitalWrite(motor_4PWM,motor_speed);
   }
-
-  else if( lJoyY > 142 and lJoyX > 142 )
+  else if ( lJoyY >= pss_val_high_low && lJoyY <= pss_val_high_high && lJoyX >=pss_val_high_low && lJoyX <= pss_val_high_high )
   {
     //Forward Right
     digitalWrite(motor_1a,HIGH);
@@ -149,8 +153,7 @@ void loop()
    digitalWrite(motor_3PWM,motor_speed);
    digitalWrite(motor_4PWM,motor_speed);
   }
-
-  else if( lJoyY < 113 and lJoyX < 113 )
+  else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high && lJoyX >= pss_val_low_low && lJoyX <= pss_val_low_high )
   {
     //Backward Left
     digitalWrite(motor_1a,LOW);
@@ -167,8 +170,7 @@ void loop()
    digitalWrite(motor_3PWM,motor_speed);
    digitalWrite(motor_4PWM,motor_speed);
   }
-  
-  else if( lJoyY > 142 and lJoyX < 113 )
+  else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high && lJoyX >= pss_val_low_low && lJoyX <= pss_val_low_high )
   {
     //Forward Left
     digitalWrite(motor_1a,HIGH);
@@ -185,8 +187,7 @@ void loop()
    digitalWrite(motor_3PWM,motor_speed);
    digitalWrite(motor_4PWM,motor_speed);
   }
-
-  else if( lJoyY < 113 and lJoyX > 142 )
+  else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high && lJoyX >= pss_val_high_low && lJoyX <= pss_val_high_high )
   {
     //Backward Right
     digitalWrite(motor_1a,HIGH);
@@ -203,8 +204,7 @@ void loop()
    digitalWrite(motor_3PWM,motor_speed);
    digitalWrite(motor_4PWM,motor_speed);
   }
-
-  else if( lJoyY > 142 )
+  else if ( lJoyY >= pss_val_high_low && lJoyY <= pss_val_high_high )
   {  
     //Forward
     digitalWrite(motor_1a,HIGH);
@@ -221,8 +221,7 @@ void loop()
    digitalWrite(motor_3PWM,motor_speed);
    digitalWrite(motor_4PWM,motor_speed);
   }
-
-  else if( lJoyY < 113 )
+  else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high ) 
   {
     //Backward
     digitalWrite(motor_1a,LOW);
@@ -239,7 +238,7 @@ void loop()
    digitalWrite(motor_3PWM,motor_speed);
    digitalWrite(motor_4PWM,motor_speed);
   }
-  else if( lJoyX < 113 )
+  else if( lJoyX >= pss_val_low_low && lJoyX <= pss_val_low_high )
   {    
     //Left
     digitalWrite(motor_1a,LOW);
@@ -256,8 +255,7 @@ void loop()
    digitalWrite(motor_3PWM,motor_speed);
    digitalWrite(motor_4PWM,motor_speed);
   }
-  
-  else if( lJoyX > 142 )
+  else if( lJoyX >=pss_val_high_low && lJoyX <= pss_val_high_high )
   {    
     //Right
     digitalWrite(motor_1a,HIGH);
