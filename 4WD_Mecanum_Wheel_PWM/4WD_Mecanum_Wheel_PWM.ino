@@ -101,7 +101,8 @@ void setup()
 }
 
 void loop() 
-{
+{ 
+  ps2x.read_gamepad();
   int lJoyY = ps2x.Analog(PSS_LY);
   int lJoyX = ps2x.Analog(PSS_LX);
   int rJoyX = ps2x.Analog(PSS_RX);
