@@ -35,3 +35,55 @@ int motor_Back_speed = 0;
 #define motor_3a 7
 #define motor_3b 8
 #define motor_3PWM 9
+
+void setup() 
+{
+  Serial.begin(57600); 
+   pinMode(motor_1a,OUTPUT);
+   pinMode(motor_1b,OUTPUT);
+   pinMode(motor_1PWM,OUTPUT);
+   pinMode(motor_2a,OUTPUT);
+   pinMode(motor_2b,OUTPUT);
+   pinMode(motor_2PWM,OUTPUT);
+   pinMode(motor_3a,OUTPUT);
+   pinMode(motor_3b,OUTPUT);
+   pinMode(motor_3PWM,OUTPUT);
+  
+  error = ps2x.config_gamepad(ps2_clock,ps2_command,ps2_attention,ps2_data,ps2_Pressures,ps2_Rumble);
+  if(error == 0)
+  {
+    Serial.println("Found Controller, configured successful");
+    Serial.println("Try out all the buttons, X will vibrate the controller, faster as you press harder;");
+    Serial.println("holding L1 or R1 will print out the analog stick values.");
+  }
+   else if(error == 1)
+    Serial.println("No controller found");
+   else if(error == 2)
+    Serial.println("Controller found but not accepting commands");
+   else if(error == 3)
+    Serial.println("Controller refusing to enter Pressures mode, may not support it. ");
+    type = ps2x.readType(); 
+      switch(type) 
+      {
+        case 0:
+         Serial.println("Unknown Controller type");
+        break;
+        case 1:
+         Serial.println("DualShock Controller Found");
+        break;
+        case 2:
+          Serial.println("GuitarHero Controller Found");
+        break;
+      }
+      
+  digitalWrite(motor_1PWM,0);
+  digitalWrite(motor_2PWM,0);
+  digitalWrite(motor_3PWM,0);
+  digitalWrite(motor_1a,HIGH);
+  digitalWrite(motor_1b,HIGH);
+  digitalWrite(motor_2a,HIGH);
+  digitalWrite(motor_2b,HIGH);
+  digitalWrite(motor_3a,HIGH);
+  digitalWrite(motor_3b,HIGH);
+
+}
