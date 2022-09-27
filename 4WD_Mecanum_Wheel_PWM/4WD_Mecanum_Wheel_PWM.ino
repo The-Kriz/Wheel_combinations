@@ -111,10 +111,10 @@ void loop()
   {
    //Rotate Left
    Serial.println("Rotating Left");
-   motor_Front_left_speed  = map( lJoyX, 120, 0, 0, 255);
-   motor_Front_right_speed = map( lJoyX, 120, 0, 0, 255);
-   motor_Back_left_speed   = map( lJoyX, 120, 0, 0, 255);
-   motor_Back_right_speed  = map( lJoyX, 120, 0, 0, 255);
+   motor_Front_left_speed  = map( rJoyX, 120, 0, 0, 255);
+   motor_Front_right_speed = map( rJoyX, 120, 0, 0, 255);
+   motor_Back_left_speed   = map( rJoyX, 120, 0, 0, 255);
+   motor_Back_right_speed  = map( rJoyX, 120, 0, 0, 255);
    
    digitalWrite(motor_1a,LOW);
    digitalWrite(motor_1b,HIGH);
@@ -135,10 +135,10 @@ void loop()
   {   
    //Rotate Right
    Serial.println("Rotating Right");
-   motor_Front_left_speed  = map( lJoyX, 140, 255, 0, 255);
-   motor_Front_right_speed = map( lJoyX, 140, 255, 0, 255);
-   motor_Back_left_speed   = map( lJoyX, 140, 255, 0, 255);
-   motor_Back_right_speed  = map( lJoyX, 140, 255, 0, 255);
+   motor_Front_left_speed  = map( rJoyX, 140, 255, 0, 255);
+   motor_Front_right_speed = map( rJoyX, 140, 255, 0, 255);
+   motor_Back_left_speed   = map( rJoyX, 140, 255, 0, 255);
+   motor_Back_right_speed  = map( rJoyX, 140, 255, 0, 255);
    
    digitalWrite(motor_1a,HIGH);
    digitalWrite(motor_1b,LOW);
