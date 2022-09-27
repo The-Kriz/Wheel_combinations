@@ -139,21 +139,6 @@ void loop()
       digitalWrite(motor_3a,LOW);
       digitalWrite(motor_3b,LOW);
     }
- else if(ps2x.Button(PSB_PAD_LEFT))
-    {
-      
-      Serial.println("Moving Left");
-      analogWrite(motor_1PWM,(motor_Front_left_speed)/2);
-      analogWrite(motor_2PWM,(motor_Front_right_speed)/2);
-      analogWrite(motor_3PWM,motor_Back_speed);
-      
-      digitalWrite(motor_1a,LOW);
-      digitalWrite(motor_1b,HIGH);
-      digitalWrite(motor_2a,LOW);
-      digitalWrite(motor_2b,HIGH);      
-      digitalWrite(motor_3a,HIGH);
-      digitalWrite(motor_3b,LOW);
-    }
      else if(ps2x.Button(PSB_PAD_LEFT))
     {
       
