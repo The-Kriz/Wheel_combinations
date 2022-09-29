@@ -24,6 +24,9 @@ Manufacturing of these wheels is an expensive affair.</br>
 Typically 3 or more wheels are mounted over the chassis for multi directional motion.</br>
 The orientation of mounting of these wheels is in the form of a polygon.</br>
 
+<img src ="https://user-images.githubusercontent.com/90817926/193021945-cedcceb0-f06b-4348-8474-16573c6fdbbe.jpg" width="250" height="250"> <img src ="https://user-images.githubusercontent.com/90817926/193021979-fc09b6ca-1845-4084-842e-e7cb19b2312f.jpg" width="250" height="250">
+
+
 
 -----
 Mecanum wheels
