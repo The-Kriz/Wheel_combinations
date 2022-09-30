@@ -35,3 +35,5 @@ These are wheels quiet similar to Omni but the rollers are inclined at an angle 
 Depending on the position of the wheel the rollers are inclined by 45 degrees either to the left direction or right direction.</br>
 <img src ="https://user-images.githubusercontent.com/90817926/193022941-502e38e9-234d-4e68-93d7-2df7a0035cf7.jpg" width="250" height="250"> <img src ="https://user-images.githubusercontent.com/90817926/193023006-23f9309c-02e8-4e99-9aa3-a96cf0ccf48b.png" width="500" height="250"> <img src ="https://user-images.githubusercontent.com/90817926/193023017-dd17d141-a611-4c06-95d5-66ef256d626f.png" width="500" height="250"><img src ="https://user-images.githubusercontent.com/90817926/193023023-e10ea16d-0779-44d7-9eaf-238b8540472c.png" width="250" height="250">
 
+[4WD_Omni_Wheel](https://github.com/The-Kriz/Wheel_combinations/tree/main/4WD_Mecanum_Wheel)
+[4WD Mecanum Wheel PWM](https://github.com/The-Kriz/Wheel_combinations/tree/main/4WD_Mecanum_Wheel_PWM)
