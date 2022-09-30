@@ -25,7 +25,8 @@ The orientation of mounting of these wheels is in the form of a polygon.</br>
 
 <img src ="https://user-images.githubusercontent.com/90817926/193021945-cedcceb0-f06b-4348-8474-16573c6fdbbe.jpg" width="250" height="250"> <img src ="https://user-images.githubusercontent.com/90817926/193021979-fc09b6ca-1845-4084-842e-e7cb19b2312f.jpg" width="250" height="250">
 
-![3WD_Omni_Wheel](https://github.com/The-Kriz/Wheel_combinations/tree/main/3WD_Omni_Wheel)
+[3WD_Omni_Wheel](https://github.com/The-Kriz/Wheel_combinations/tree/main/3WD_Omni_Wheel)
+[3WD Omni Wheel With PWM](https://github.com/The-Kriz/Wheel_combinations/tree/main/3WD_Omni_Wheel_PWM)
 
 
 ## Mecanum wheels
