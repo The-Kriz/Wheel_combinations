@@ -76,3 +76,74 @@ void setup()
   digitalWrite(motor_2b,HIGH);
 
 }
+
+void loop() 
+{
+  ps2x.read_gamepad();
+  int lJoyY = ps2x.Analog(PSS_LY);
+  int lJoyX = ps2x.Analog(PSS_LX);
+
+if ( lJoyY >= pss_val_high_low && lJoyY <= pss_val_high_high )
+  {  
+    //Forward
+    Serial.println("moving Forward");
+    digitalWrite(motor_1a,HIGH);
+    digitalWrite(motor_1b,LOW);
+    digitalWrite(motor_2a,LOW);
+    digitalWrite(motor_2b,HIGH);
+    
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+  }
+  else if( lJoyY >= pss_val_low_low && lJoyY <= pss_val_low_high ) 
+  {
+    //Backward
+    Serial.println("moving Backward");
+    digitalWrite(motor_1a,LOW);
+    digitalWrite(motor_1b,HIGH);
+    digitalWrite(motor_2a,HIGH);
+    digitalWrite(motor_2b,LOW);
+
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+
+  }
+  else if( lJoyX >= pss_val_low_low && lJoyX <= pss_val_low_high )
+  {    
+    //Left
+    Serial.println("moving Left");
+    digitalWrite(motor_1a,HIGH);
+    digitalWrite(motor_1b,HIGH);
+    digitalWrite(motor_2a,LOW);
+    digitalWrite(motor_2b,HIGH);
+    
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+   
+  }
+  else if( lJoyX >=pss_val_high_low && lJoyX <= pss_val_high_high )
+  {    
+    //Right
+    Serial.println("moving Right");
+    digitalWrite(motor_1a,HIGH);
+    digitalWrite(motor_1b,LOW);
+    digitalWrite(motor_2a,HIGH);
+    digitalWrite(motor_2b,HIGH);
+    
+   digitalWrite(motor_1PWM,motor_speed);
+   digitalWrite(motor_2PWM,motor_speed);
+
+  }
+  else
+  {
+    digitalWrite(motor_1a,HIGH);
+    digitalWrite(motor_1b,HIGH);
+    digitalWrite(motor_2a,HIGH);
+    digitalWrite(motor_2b,HIGH);
+
+    digitalWrite(motor_1PWM,0);
+    digitalWrite(motor_2PWM,0);
+
+  }
+  delay(50);
+}
